@@ -15,7 +15,14 @@
       <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
     </a-assets>
 
-    <a-entity position="2 4 -6" id="lightSphere" geometry="primitive: sphere" material="color: #FFF; shader: flat" light="type:point"></a-entity>
+    <a-entity animation__position="property: position; dir: alternate; dur: 600;
+                                easing: easeInSine; loop: true; to: -2 4 -6"
+              position="2 4 -6"
+              id="lightSphere"
+              geometry="primitive: sphere"
+              material="color: #FFF; shader: flat"
+              light="type:point">
+    </a-entity>
 
     <a-entity geometry="primitive: box" material="color: red" position="0 0.5 -10"></a-entity>
     <a-entity geometry="primitive: box" material="color: orange" position="-2 0.5 -8"></a-entity>
