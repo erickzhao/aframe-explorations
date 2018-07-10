@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registry - A-Frame School</title>
+    <meta name="description" content="Registry - A-Frame School">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-outline@%5E1.1.0/build/aframe-outline.min.js"></script>
+  </head>
+  <body>
+    <a-scene outline>
+      <a-assets>
+        <img id="groundTexture" src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png">
+      </a-assets>
+      <a-entity position="0 2.25 0" particle-system="preset: snow"></a-entity>
+      <a-entity id="box" geometry="primitive: box; width: 1; depth: 1; height: 1" position="-1 0.5 -3" material="color: #4CC3D9"></a-entity>
+      <a-entity id="sphere" geometry="primitive: sphere; radius: 1.25" material="color: #EF2D5E" position="0 1.25 -5" particle-system="preset: default"></a-entity>
+      <a-entity id="cylinder" geometry="primitive: cylinder; radius: 0.5; height: 1.5" position="1 0.75 -3" material="color: #FFC65D"></a-entity>
+      
+      <a-entity id="plane" geometry="primitive: plane; width: 10000; height: 10000" material="color: #333; src: #groundTexture; repeat: 10000 10000; transparent: true; metalness: 0.6; roughness: 0.4" rotation="-90 0 0"></a-entity>
+      <a-entity id="sky" geometry="primitive: sphere; radius: 100" material="color: #666; shader: flat; side: back"></a-entity>
+      <a-entity light="type: ambient; color: #444"></a-entity>
+      <a-entity light="type: directional; color: #AAA" position="-1 2 0"></a-entity>
+    </a-scene>
+  </body>
+</html>
+
